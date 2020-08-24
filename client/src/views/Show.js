@@ -7,7 +7,7 @@ const Show = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1234/api/product/" + props.id)
+      .get("http://localhost:8000/api/product/" + props.id)
       .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -15,7 +15,7 @@ const Show = (props) => {
   const deleteProduct = (e) => {
     e.preventDefault();
     axios
-      .delete("http://localhost:1234/api/product/delete/" + props.id)
+      .delete("http://localhost:8000/api/product/delete/" + props.id)
       .then((result) => {
         console.log(result);
         navigate("/products");

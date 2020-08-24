@@ -7,7 +7,7 @@ const ProductList = (props) => {
     e.preventDefault();
     //id = e.target.name;
     axios
-      .delete("http://localhost:1234/api/product/delete/" + e.target.name)
+      .delete("http://localhost:8000/api/product/delete/" + e.target.name)
       .then((result) => {
         props.getData();
       })

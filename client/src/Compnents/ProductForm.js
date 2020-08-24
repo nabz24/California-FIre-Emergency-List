@@ -10,7 +10,7 @@ const ProductForm = (props) => {
   const createData = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:1234/api/createNew", {
+      .post("http://localhost:8000/api/createNew", {
         Title,
         Price,
         Description,

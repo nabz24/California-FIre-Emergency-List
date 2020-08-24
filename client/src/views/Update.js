@@ -9,7 +9,7 @@ const Update = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:1234/api/product/${props.id}`)
+      .get(`http://localhost:8000/api/product/${props.id}`)
       .then((res) => {
         setTitle(res.data.Title);
         setPrice(res.data.Price);
@@ -22,7 +22,7 @@ const Update = (props) => {
   const updateProduct = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:1234/api/product/edit/${props.id}`, {
+      .put(`http://localhost:8000/api/product/edit/${props.id}`, {
         Title,
         Price,
         Description,

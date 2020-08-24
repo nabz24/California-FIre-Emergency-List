@@ -5,7 +5,7 @@ const PersonDetails = (props) => {
   const [product, setProduct] = useState({});
   useEffect(() => {
     axios
-      .get("http://localhost:1234/api/product/${props.id}")
+      .get("http://localhost:8000/api/product/${props.id}")
       .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
   }, []);

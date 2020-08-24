@@ -8,7 +8,7 @@ const Main = () => {
   const [loaded, setLoaded] = useState(false);
 
   const getData = () => {
-    axios.get("http://localhost:1234/api/products").then((res) => {
+    axios.get("http://localhost:8000/api/products").then((res) => {
       setProducts(res.data);
       setLoaded(true);
     });
