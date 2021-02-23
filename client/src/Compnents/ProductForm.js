@@ -6,6 +6,7 @@ const ProductForm = (props) => {
   const [Title, setProductName] = useState("");
   const [Price, setPrice] = useState(0);
   const [Description, setDescription] = useState("");
+  const [Purchased, setPurchase] = useState(false);
 
   const createData = (e) => {
     e.preventDefault();
@@ -14,8 +15,12 @@ const ProductForm = (props) => {
         Title,
         Price,
         Description,
+        Purchased,
       })
-      .then((res) => props.getData())
+      .then((res) => {
+        console.log(res.data);
+        props.getData();
+      })
       .catch((err) => console.log(err));
   };
 
@@ -23,7 +28,7 @@ const ProductForm = (props) => {
     <div>
       <form>
         <div className="form-group w-50">
-          <label>Title</label>
+          <label>Item</label>
           <input
             type="text"
             className="form-control"
@@ -31,7 +36,7 @@ const ProductForm = (props) => {
           />
         </div>
         <div className="form-group w-50">
-          <label>Price</label>
+          <label>Quantity</label>
           <input
             type="text"
             className="form-control"
@@ -46,8 +51,16 @@ const ProductForm = (props) => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
+        <div className="form-group w-50">
+          <input
+            type="checkbox"
+            id="purchase"
+            onChange={(e) => setPurchase(e.target.checked)}
+          ></input>{" "}
+          Purchased
+        </div>
         <button className="btn btn-warning" onClick={createData}>
-          Add Product
+          Add Item
         </button>
       </form>
     </div>

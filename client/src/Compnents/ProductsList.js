@@ -13,6 +13,16 @@ const ProductList = (props) => {
       })
       .catch((err) => console.log(err));
   };
+
+  const boolConv = (e) => {
+    if (e === true) {
+      console.log("ddddd");
+      return <h5 className="text-center text-success">Purchased</h5>;
+    } else {
+      return <h5 className="text-center text-danger">Not Purchased</h5>;
+    }
+  };
+
   return (
     <div className="row pt-2">
       {props.products.map((product, index) => {
@@ -20,8 +30,11 @@ const ProductList = (props) => {
           <div className="card text-center col-sm-3">
             <div className="card-body">
               <Link to={"/product/" + product._id}>
-                <h2>{product.Title}</h2>
+                <h2>
+                  <u>{product.Title}</u>
+                </h2>
               </Link>
+              {boolConv(product.Purchased)}
               <button
                 className="btn btn-warning"
                 onClick={deleteProduct}

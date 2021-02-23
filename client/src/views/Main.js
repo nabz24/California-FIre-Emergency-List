@@ -19,10 +19,22 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid bg-light " style={{ height: "100vh" }}>
+      <div className="row bg-warning text-dark p-2 mb-5">
+        <div className="container mx-auto text-center">
+          <h1
+            className="text-center align-middle"
+            style={{
+              display: "inline-block",
+            }}
+          >
+            California Fire Emergency List
+          </h1>
+        </div>
+      </div>
       <div className="container">
         <div className="col-12">
-          <h2 className="display-4">Product Manager</h2>
+          <h2 className="display-4">Supply Kit</h2>
           <ProductForm getData={getData} />
         </div>
       </div>
