@@ -6,12 +6,13 @@ module.exports.index = (req, res) => {
 };
 
 module.exports.createProduct = (req, res) => {
-  const { Title, Price, Description } = req.body;
+  const { Title, Price, Description, Purchased } = req.body;
   //console.log(productName, price, description);
   Product.create({
     Title,
     Price,
     Description,
+    Purchased,
   })
     .then((product) => res.json(product))
     .catch((err) => res.json(err));
