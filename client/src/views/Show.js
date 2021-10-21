@@ -25,7 +25,6 @@ const Show = (props) => {
 
   const boolConv = (e) => {
     if (e === true) {
-      console.log("ddddd");
       return <h3 className="text-center text-success">Purchased</h3>;
     } else {
       return <h3 className="text-center text-danger">Not Purchased</h3>;

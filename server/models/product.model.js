@@ -1,3 +1,4 @@
+// used products to define emergency items
 const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema(
   {
