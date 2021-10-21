@@ -1,3 +1,4 @@
+// establish connection with database
 const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost/productManager", {

@@ -1,3 +1,4 @@
+// routes for website
 const ProductController = require("../controllers/product.controller");
 
 module.exports = (app) => {

@@ -6,7 +6,7 @@ California fire emergency supply list website was created using React and MongoD
 
 ## Available Scripts
 
-To view front end of project, clone or download the repository. After install all dependicies by running the command "npm-install in the "client" folder on terminal and then run 'npm start':
+To view front end of project, clone or download the repository. After install all dependicies by running the command "npm-install" in the "client" folder on terminal and then run 'npm start':
 
 ### `npm start`
 

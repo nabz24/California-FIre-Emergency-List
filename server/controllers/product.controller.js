@@ -1,7 +1,7 @@
 const { Product } = require("../models/product.model");
 const { request } = require("express");
 
-// find certain product
+// get all products
 module.exports.index = (req, res) => {
   Product.find().then((allProd) => res.json(allProd));
 };
@@ -20,7 +20,7 @@ module.exports.createProduct = (req, res) => {
     .catch((err) => res.json(err));
 };
 
-//find product
+//find certain product
 module.exports.findProduct = (req, res) => {
   Product.findOne({ _id: req.params.id })
     .then((product) => res.json(product))
