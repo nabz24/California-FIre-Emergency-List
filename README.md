@@ -1,8 +1,10 @@
 # California Fire Emergency List Website
+
 California wild fires cause mass evacuations in a blink of an eye. People are asked to leave their homes instantly. This website was created to help households maintain a list of items that are essential for the next time evacuations occur.
 
 ## Background on website and tools used
-California fire emergency supply list website was created using React and MongoDB. The website followed web development best practices such as the MVC pattern. I implemented React specific methodologies and features like "hooks" to set variables, "functional components" to organize and reuse code, and "promises" to make sure code was running in an orderly fashion. I used Axios to pull data from APIs and followed CRUD principles to manage the database. I utilized Express and Cors, so the REACT front-end framework could communicate with the MongoDB backend to edit and create data. 
+
+California fire emergency supply list website was created using React and MongoDB. The website followed web development best practices such as the MVC pattern. I implemented React specific methodologies and features like "hooks" to set variables, "functional components" to organize and reuse code, and "promises" to make sure code was running in an orderly fashion. I used Axios to pull data from APIs and followed CRUD principles to manage the database. I utilized Express and Cors, so the REACT front-end framework could communicate with the MongoDB backend to edit and create data. The website is hosted on Amazon Web Services and can be found by visting http://54.219.181.231/ .
 
 ## Available Scripts
 
